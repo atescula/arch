@@ -1,0 +1,333 @@
+{
+    "app_config": {
+        "audio_config": {
+            "audio": "pipewire"
+        },
+        "bluetooth_config": {
+            "enabled": true
+        },
+        "power_management_config": {
+            "power_management": "power-profiles-daemon"
+        },
+        "print_service_config": {
+            "enabled": true
+        }
+    },
+    "archinstall-language": "English",
+    "auth_config": {},
+    "bootloader_config": {
+        "bootloader": "Grub",
+        "removable": true,
+        "uki": false
+    },
+    "custom_commands": [],
+    "disk_config": {
+        "btrfs_options": {
+            "snapshot_config": null
+        },
+        "config_type": "default_layout",
+        "device_modifications": [
+            {
+                "device": "/dev/nvme0n1",
+                "partitions": [
+                    {
+                        "btrfs": [],
+                        "dev_path": null,
+                        "flags": [
+                            "boot",
+                            "esp"
+                        ],
+                        "fs_type": "fat32",
+                        "mount_options": [],
+                        "mountpoint": "/efi",
+                        "obj_id": "14f93ee8-5d19-4db7-adc4-6257f8f87bda",
+                        "size": {
+                            "sector_size": {
+                                "unit": "B",
+                                "value": 512
+                            },
+                            "unit": "GiB",
+                            "value": 1
+                        },
+                        "start": {
+                            "sector_size": {
+                                "unit": "B",
+                                "value": 512
+                            },
+                            "unit": "MiB",
+                            "value": 1
+                        },
+                        "status": "create",
+                        "type": "primary"
+                    },
+                    {
+                        "btrfs": [
+                            {
+                                "mountpoint": "/",
+                                "name": "@"
+                            },
+                            {
+                                "mountpoint": "/home",
+                                "name": "@home"
+                            },
+                            {
+                                "mountpoint": "/var/log",
+                                "name": "@log"
+                            },
+                            {
+                                "mountpoint": "/var/cache/pacman/pkg",
+                                "name": "@pkg"
+                            },
+                            {
+                                "mountpoint": "/var/lib/libvirt",
+                                "name": "@libvirt"
+                            },
+                            {
+                                "mountpoint": "/var/lib/docker",
+                                "name": "@docker"
+                            },
+                            {
+                                "mountpoint": "/var/lib/machines",
+                                "name": "@machines"
+                            },
+                            {
+                                "mountpoint": "/var/swap",
+                                "name": "@swap"
+                            }
+                        ],
+                        "dev_path": null,
+                        "flags": [],
+                        "fs_type": "btrfs",
+                        "mount_options": [
+                            "compress=zstd",
+                            "noatime",
+                            "space_cache=v2"
+                        ],
+                        "mountpoint": null,
+                        "obj_id": "2c2ee738-9994-4d44-8270-42825024dbed",
+                        "size": {
+                            "sector_size": {
+                                "unit": "B",
+                                "value": 512
+                            },
+                            "unit": "B",
+                            "value": 2047332057088
+                        },
+                        "start": {
+                            "sector_size": {
+                                "unit": "B",
+                                "value": 512
+                            },
+                            "unit": "B",
+                            "value": 1074790400
+                        },
+                        "status": "create",
+                        "type": "primary"
+                    }
+                ],
+                "wipe": true
+            }
+        ]
+    },
+    "hostname": "neptune",
+    "kernels": [
+        "linux"
+    ],
+    "locale_config": {
+        "kb_layout": "us",
+        "sys_enc": "UTF-8",
+        "sys_lang": "en_US.UTF-8"
+    },
+    "mirror_config": {
+        "custom_repositories": [],
+        "custom_servers": [],
+        "mirror_regions": {
+            "Bulgaria": [
+                "http://mirror.telepoint.bg/archlinux/$repo/os/$arch",
+                "https://mirror.telepoint.bg/archlinux/$repo/os/$arch",
+                "http://mirrors.uni-plovdiv.net/archlinux/$repo/os/$arch",
+                "https://mirrors.uni-plovdiv.net/archlinux/$repo/os/$arch",
+                "http://mirror.host.ag/archlinux/$repo/os/$arch"
+            ],
+            "Greece": [
+                "http://ftp.otenet.gr/linux/archlinux/$repo/os/$arch",
+                "http://ftp.cc.uoc.gr/mirrors/linux/archlinux/$repo/os/$arch",
+                "https://repo.greeklug.gr/data/pub/linux/archlinux/$repo/os/$arch"
+            ],
+            "Romania": [
+                "http://archlinux.mirrors.linux.ro/$repo/os/$arch",
+                "http://mirrors.pidginhost.com/arch/$repo/os/$arch",
+                "https://mirrors.pidginhost.com/arch/$repo/os/$arch",
+                "http://mirrors.nxthost.com/archlinux/$repo/os/$arch",
+                "https://mirrors.nxthost.com/archlinux/$repo/os/$arch",
+                "http://mirrors.nav.ro/archlinux/$repo/os/$arch",
+                "http://mirror.efect.ro/archlinux/$repo/os/$arch",
+                "https://mirror.efect.ro/archlinux/$repo/os/$arch",
+                "http://mirrors.chroot.ro/archlinux/$repo/os/$arch",
+                "https://mirrors.chroot.ro/archlinux/$repo/os/$arch",
+                "http://mirrors.hostico.ro/archlinux/$repo/os/$arch",
+                "https://mirrors.hostico.ro/archlinux/$repo/os/$arch",
+                "http://ro.mirror.flokinet.net/archlinux/$repo/os/$arch",
+                "https://ro.mirror.flokinet.net/archlinux/$repo/os/$arch",
+                "http://mirrors.hosterion.ro/archlinux/$repo/os/$arch",
+                "https://mirrors.hosterion.ro/archlinux/$repo/os/$arch",
+                "https://ro.arch.niranjan.co/$repo/os/$arch"
+            ]
+        },
+        "optional_repositories": [
+            "multilib"
+        ]
+    },
+    "network_config": {
+        "type": "nm"
+    },
+    "ntp": true,
+    "packages": [
+        "accountsservice",
+        "amd-ucode",
+        "android-file-transfer",
+        "ark",
+        "avahi",
+        "base-devel",
+        "bash-completion",
+        "bitwarden",
+        "bluedevil",
+        "breeze-gtk",
+        "breeze-icons",
+        "btrfs-assistant",
+        "btrfs-progs",
+        "cifs-utils",
+        "cryptsetup",
+        "cups",
+        "dbus-broker-units",
+        "digikam",
+        "discover"
+        "dolphin",
+        "efibootmgr",
+        "fastfetch",
+        "filelight",
+        "filezilla",
+        "firefox",
+        "fzf",
+        "git",
+        "gnome-disk-utility",
+        "gping",
+        "grub-btrfs",
+        "gwenview",
+        "htop",
+        "hunspell-el",
+        "hunspell-ro",
+        "inotify-tools",
+        "inotify-tools",
+        "jq",
+        "kate",
+        "kcalc",
+        "kdeconnect",
+        "kdenlive",
+        "keysmith",
+        "kfind",
+        "kio-fuse",
+        "konsole",
+        "krdc",
+        "krfb",
+        "krename",
+        "krusader",
+        "kdiff3",
+        "kjournald",
+        "kruler",
+        "kcolorchooser",
+        "krita",
+        "kompare",
+        "kalk",
+        "krusader",
+        "kscreen",
+        "kwallet-pam",
+        "kwalletmanager",
+        "kwayland-integration",
+        "kwin",
+        "libreoffice-fresh",
+        "libreoffice-fresh-el",
+        "libreoffice-fresh-ro",
+        "libvlc",
+        "man-db",
+        "man-pages",
+        "meld",
+        "mpv",
+        "nano",
+        "nano-syntax-highlighting",
+        "ncdu",
+        "networkmanager",
+        "nfs-utils",
+        "nload",
+        "nmap",
+        "nss-mdns",
+        "obsidian",
+        "okular",
+        "papirus-icon-theme",
+        "partitionmanager",
+        "perl-image-exiftool",
+        "phonon-qt6-vlc",
+        "pipewire-pulse",
+        "pkgfile",
+        "plasma-browser-integration",
+        "plasma-desktop",
+        "plasma-disks",
+        "plasma-nm",
+        "plasma-pa",
+        "plasma-systemmonitor",
+        "plocate",
+        "powerdevil",
+        "print-manager",
+        "qbittorrent",
+        "reflector",
+        "samba",
+        "sddm",
+        "sddm-kcm",
+        "snap-pac",
+        "snapper",
+        "solid",
+        "spectacle",
+        "speedtest-cli",
+        "strawberry",
+        "tailscale",
+        "ttf-iosevkaterm-nerd",
+        "ttf-jetbrains-mono-nerd",
+        "tealdeer",
+        "telegram-desktop",
+        "thunderbird",
+        "usbutils",
+        "vlc",
+        "vlc-plugin-x264",
+        "vlc-plugin-x265",
+        "xdg-desktop-portal-kde",
+        "xdg-user-dirs",
+        "x264",
+        "x265",
+        "yt-dlp",
+        "zram-generator",
+        "zsh",
+        "zsh-completions"
+    ],
+    "parallel_downloads": 10,
+    "profile_config": {
+        "gfx_driver": "AMD / ATI (open-source)",
+        "greeter": "sddm",
+        "profile": {
+            "custom_settings": {
+                "KDE Plasma": {}
+            },
+            "details": [
+                "KDE Plasma"
+            ],
+            "main": "Desktop"
+        }
+    },
+    "script": null,
+    "services": [],
+    "swap": {
+        "algorithm": "zstd",
+        "enabled": true
+    },
+    "timezone": "Europe/Bucharest",
+    "version": "3.0.15"
+}
